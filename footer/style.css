@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+:root {
+    --color-1: #222831;
+    --color-2: #393E46;
+    --color-3: #83BA43;
+    --color-4: #EEEEEE;
+    --color-5: #00ADB5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--color-4);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    width: 47rem;
+    padding: 3.6rem 0 3.3rem 0;
+    margin: 0 1.5rem 0 1.5rem;
+    position: relative;
+}
+
+.go-up-btn {
+    padding: .4rem 1rem .4rem 2rem;
+    position: absolute;
+    top: -.7rem;
+    right: 0;
+    font-size: 1.03rem;
+    color: var(--color-2);
+    background-color: var(--color-4);
+    border: var(--color-2) 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.go-up-btn i {
+    position: absolute;
+    left: .6rem;
+    top: .24rem;
+    color: var(--color-2);
+    font-size: 1.4rem;
+}
+
+.go-up-btn-mobile {
+    padding: .5rem 1rem .5rem 2rem;
+    border-radius: 5px;
+    top: -.65rem;
+    right: 0;
+    color: var(--color-4);
+    background-color: var(--color-2);
+    border: var(--color-4) 1px solid;
+    display: none;
+}
+
+.go-up-btn-mobile i {
+    top: .37rem;
+    color: var(--color-4);
+}
+
+.footer-container-buttom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.footer-container-buttom #copy-right {
+    width: 55%;
+    position: relative;
+    z-index: 0;
+}
+
+.footer-container-buttom #copy-right .around-light-container {
+    position: absolute;
+    inset: -12px 0 0 -12px;
+    width: calc(100% + 10px);
+    height: calc(100% + 11px);
+    overflow: hidden;
+    z-index: -1;
+    border-radius: 1px;
+}
+
+.footer-container-buttom #copy-right .around-light-container::before {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background-color: var(--color-2);
+    border-radius: inherit;
+}
+
+.footer-container-buttom #copy-right .around-light-container i {
+    position: absolute;
+    width: 80px;
+    height: 400%;
+    background: linear-gradient(90deg, transparent, #fff 20% 80%, transparent);
+    z-index: -1;
+    transform: rotate(55deg) translate(-17rem, -15rem);
+}
+
+@keyframes around-light-anim {
+    to {
+        transform: rotate(55deg) translate(10rem, -15rem);
+    }
+}
+
+.footer-container-buttom #copy-right p {
+    font-size: .8rem;
+    font-weight: 300;
+    color: #999;
+    line-height: 1.7;
+}
+
+.footer-container-buttom #copy-right p a {
+    color: var(--color-5);
+    text-decoration: none;
+}
+
+.footer-container-buttom .copy-right-h3-container {
+    background-color: var(--color-4);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.footer-container-buttom h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.footer-container-buttom .builder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container-buttom .builder a {
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.footer-container-buttom .builder img {
+    width: 5rem;
+    clip-path: circle(49%);
+    filter: grayscale(1);
+    transition: .2s;
+}
+
+.footer-container-buttom .builder img:hover {
+    filter: grayscale(0);
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .footer-container {
+        padding: 4.4rem 0 2.9rem 0;
+        margin: 0 1rem 0 1rem;
+    }
+
+    .footer-container h1 {
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+    }
+
+    .go-up-btn:first-child {
+        display: none;
+    }
+
+    .go-up-btn-mobile {
+        display: block;
+    }
+
+    .footer-container-buttom {
+        margin-top: 3.6rem;
+    }
+
+    .footer-container-buttom #copy-right {
+        width: 50%;
+    }
+
+    .footer-container-buttom #copy-right .around-light-container {
+        display: none;
+    }
+}
